@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Installing Xen on Xubuntu | B McCulley</title>
+        <meta name="description" content="ERROR: Can't find hypervisor information in sysfs! Fix while installing Xen on Xubuntu.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+       <div class="wrapper">
+           <div class="header">
+		<h1 class="site-title"><a href="http://bmcculley.github.io" title="home">B McCulley</a></h1>
+       </div><!-- header -->
+              <article class="content">
+                    <div class="entry-title">Installing Xen on Xubuntu</div>
+
+<p>After following this <a href="https://help.ubuntu.com/community/Xen">tutorial on installing Xen on Ubuntu</a> I ran into this little number:</p>
+
+<pre>ERROR: Can't find hypervisor information in sysfs!</pre>
+
+<p>After scouring the Internets, I found that installing a few more packages and manually adding things to the the end of the xend-config.sxp all is well.</p>
+
+<p>first: install some more shit</p>
+
+<pre>sudo apt-get install xen-utils xenwatch xen-tools xen-utils-common xenstore-utils virtinst virt-viewer virt-manager</pre>
+
+<p>Next open up the xend-config.sxp file and append this at the end:</p>
+
+<pre>sudo nano /etc/xen/xend-config.sxp
+
+(xend-http-server yes)
+(xend-unix-server yes)
+(vif-script vif-bridge)</pre>
+
+<p>Save and close.</p>
+
+<p>Carry on with updating the boot order and...</p>
+<p>After these few tweaks you should be able to reboot and carry on.</p>
+
+              </article><!-- content -->
+		<footer class="footer">
+		    <div class="copy-link"><p>&copy; <a href="http://bmcculley.github.io" title="B McCulley">B McCulley</a> 2013</p></div>
+        <div class="contact-link"><p><a href="http://www.google.com/recaptcha/mailhide/d?k=01NcWfFkKCXl1mz-Nyg5zJ-w==&amp;c=2SM8GEmgqFCzmkkmq3vbh4qa_I4zoNRsTXDIq-bZcEE=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\07501NcWfFkKCXl1mz-Nyg5zJ-w\75\75\46c\0752SM8GEmgqFCzmkkmq3vbh4qa_I4zoNRsTXDIq-bZcEE\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Reveal this e-mail address"><img src="img/googlemail-64.png"/></a></p></div>
+		</footer><!-- footer -->
+	</div><!-- wrapper -->
+    </body>
+</html>
