@@ -113,10 +113,10 @@ a:hover {
 .site-title,
 .site-title a,
 .site-title a:hover {
-	color: #fff;
+  color: #fff;
   float: left;
   margin: 7px 0 4px 10px;
-	text-decoration: none;
+  text-decoration: none;
 }
 .hire-me {
   display: none;
@@ -311,10 +311,7 @@ pre {
     .site-title,
     .site-title a,
     .site-title a:hover {
-      color: #fff;
-      float: left;
       margin: 28px 0 4px 20px;
-      text-decoration: none;
     }
     .hire-me {
       display: block;
