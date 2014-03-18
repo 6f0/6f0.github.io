@@ -25,7 +25,7 @@
             <div class="hire-me"><a class="btn btn-success" href="http://www.google.com/recaptcha/mailhide/d?k=01NcWfFkKCXl1mz-Nyg5zJ-w==&amp;c=2SM8GEmgqFCzmkkmq3vbh4qa_I4zoNRsTXDIq-bZcEE=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\07501NcWfFkKCXl1mz-Nyg5zJ-w\75\75\46c\0752SM8GEmgqFCzmkkmq3vbh4qa_I4zoNRsTXDIq-bZcEE\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Hire B McCulley">Hire Me</a></div>
           </div><!-- header -->
           <article class="content">
-<h1>Dynamically Load CSS To Speed Up Page Loads</h1>
+<h2>Dynamically Load CSS To Speed Up Page Loads</h2>
 <p>Earlier today I had this crazy idea of loading up CSS after the HTML to help increase page load times. I had the idea sometime ago actually, it actually came about after I pointed my browser at blekko. I'm not really sure whether they do it on purpose or not but their CSS loads a split second after the HTML loads. It repeatedly does this which leads me to believe that it's done on purpose. Anyway, I decided to give it a shot and see if it did in fact help out with page load times.</p>
 <p>After some brief and not so scientific testing, it was clear that dynamically loading CSS was much faster. For testing I used the network page load tester located in the Firefox web console.</p>
 <p>The exact same page was used in both tests, with the way the CSS was being loaded the only difference. I used pure JavaScript for the first round of this test. In that test page size was cut practically in half and the load time didn't even register.</p>
