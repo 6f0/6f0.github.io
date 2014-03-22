@@ -1,0 +1,9 @@
+body {
+    background: #e4e4e4 url('../img/skulls.png');
+}
+.content {
+    padding: 20px 50px;
+}
+.header {
+    background: #2980b9;
+}
