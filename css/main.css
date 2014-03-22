@@ -260,9 +260,22 @@ pre {
   -webkit-filter: grayscale(1);
 }
 
-.span3 img.hover {
+.email img {
+  filter: url('../img/filters.svg#bw');
+  filter: bw;
+  -webkit-filter: bw(1);
+}
+
+.span3 img.hover,
+.email img:hover {
   filter: none;
   -webkit-filter: grayscale(0);
+}
+
+.github img:hover {
+  filter: url('../img/filters.svg#black');
+  filter: black;
+  -webkit-filter: black(1);
 }
 
 .pt {
@@ -402,10 +415,10 @@ pre {
 @media only screen and (min-width: 35em) {
     /* Style adjustments for viewports that meet the condition */
     body {
-	background: #e4e4e4 url('../img/fabric_plaid.png') repeat;
+      background: #e4e4e4 url('../img/fabric_plaid.png') repeat;
     }
     .header {
-	min-height: 168px;
+      min-height: 168px;
     }
     .site-title,
     .site-title a,
