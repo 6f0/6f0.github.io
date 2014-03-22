@@ -22,7 +22,7 @@ jQuery(document).ready(function($) {
 	});
 
 	$(document).keyup(function(e){
-	    if(e.keyCode === 27){
+	    if(e.keyCode === 27 || e.keyCode == 13){
 	    	$('.modal').hide();
 			$('.modal-background').hide();
 	    }
