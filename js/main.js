@@ -1,8 +1,7 @@
 jQuery(document).ready(function($) {
 	var value;
 	$('.pt a').hover(function() {
-		value = $(this).data();
-		value = '.'+value['value'];
+		value = '.' + $(this).data('value');
 		$(value).addClass('hover');
 	}, function() {
 		$(value).removeClass('hover');
