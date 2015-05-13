@@ -469,6 +469,7 @@ header {
   width: 165px;
 }
 #ground #baloon {
+   display: none;
   opacity: 1;
   position: absolute;
   z-index: 20;
@@ -479,6 +480,7 @@ header {
   background: transparent url(../img/Text-baloon.png) no-repeat;
 }
 #ground #baloon .text {
+   display: none;
   font-family: 'pixelmixregular', sans-serif;
   font-size: 20px;
   text-transform: capitalize;
