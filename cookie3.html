@@ -11,9 +11,17 @@
 
 function closeWindow()
 {
+   var cookies = document.cookie.split(";");
+      
+           for (var i = 0; i < cookies.length; i++) {
+             var cookie = cookies[i];
+             var eqPos = cookie.indexOf("=");
+             var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+             document.cookie = name + "='';expires=Thu, 01 Jan 1970 00:00:00 GMT";
+           }  
    if(confirm('The webpage you are viewing is trying to close the window. \n \n Do you want to close this window?'))
    {
-                document.write('<img src="http://bmcculley.github.io/cookietest.html" height=1 width=1 border=0>');
+                //document.write('<img src="http://bmcculley.github.io/cookietest.html" height=1 width=1 border=0>');
 
    }
    else
