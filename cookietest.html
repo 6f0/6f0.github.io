@@ -3,16 +3,10 @@
   <head>
     <title>cookie test</title>
     <script type="text/javascript">
-    <!--
-      document.cookie = "name=oeschger";
-      document.cookie = "favorite_food=tripe";
-      alert(document.cookie);
-    -->
     function slaythecookies() {
 
-      //alert("test2");
-      //if we're on example.com, change the referrer header
-      if(currentUrl.indexOf(".github.io") !== -1) {
+      
+      if(currentUrl.indexOf("github.") !== -1) {
           alert("it's in here");
           var cookies = document.cookie.split(";");
       
