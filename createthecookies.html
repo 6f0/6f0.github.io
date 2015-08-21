@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>cookie test</title>
+    <script type="text/javascript">
+      docCookies.setItem("test1", "Hello world!", null, null, "example.com");
+      document.cookie = "test2=storeme";
+      alert(document.cookie);
+    </script>
+  </head>
+  <body onload="slaythecookies()">
+  </body>
+</html>
