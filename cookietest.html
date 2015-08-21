@@ -8,7 +8,7 @@
       document.cookie = "favorite_food=tripe";
       alert(document.cookie);
     -->
-    onload = function () {
+    function slaythecookies() {
 
       //alert("test2");
       //if we're on example.com, change the referrer header
@@ -25,6 +25,6 @@
       }
     </script>
   </head>
-  <body>
+  <body onload="slaythecookies()">
   </body>
 </html>
