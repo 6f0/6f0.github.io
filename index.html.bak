@@ -12,7 +12,6 @@
     <body>
 
         <div class="container">
-<<<<<<< HEAD
             <div class="header">
                 <h1>bmcculley</h1>
             </div>
@@ -28,11 +27,9 @@
             <div class="footer">
                 <a href="http://bmcculley.github.io">bmcculley</a>
             </div>
-=======
             <h1>bmcculley</h1>
             <a class="contact" href="./contact.html">contact</a>
             <a href="http://github.com/bmcculley">github</a>
->>>>>>> a76ef803c2b6c613a9e2555e8a8ae7d6f85cdd22
         </div>
 
 
