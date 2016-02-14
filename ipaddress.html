@@ -1,0 +1,24 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Client IP with jQuery</title>
+        <meta name="description" content="Get a client ip address using jquery.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h2>Hello world! Get Client IP with jQuery.</h2>
+        <p class="ip-address"></p>
+
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script type="text/javascript">
+        $( document ).ready(function() {
+            console.log( "ready!" );
+            $.getJSON('//ejank.com/getip.php', function(data){
+              $( ".ip-address" ).text('Your ip is: ' +  data.ip);
+            });
+        });
+        </script>
+    </body>
+</html>
