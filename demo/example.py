@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 
 # make the page request
-r = requests.get("http://localhost:8888/demo/table-data.html")
+r = requests.get("http://bmcculley.github.io/demo/table-data.html")
 
 # make sure the result is good
 if r.status_code == 200 and r.headers['Content-type'] == "text/html":
