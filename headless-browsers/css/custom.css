@@ -23,6 +23,11 @@ a:focus {
     outline-offset: -2px;
 }
 
+h3,
+.page-title {
+    color: #666;
+}
+
 .container {
     margin: 30px auto;
     max-width: 1180px;
@@ -71,4 +76,25 @@ table thead {
 
 table td {
     background-color: transparent;
+}
+
+tr:nth-child(even) {
+    background-color: #ecf0f1;
+}
+
+.footer {
+    border-top: 1px solid #ccc;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+.pl {
+    float: left;
+    width: 45%;
+}
+
+.pr {
+    float: right;
+    text-align: right;
+    width: 45%;
 }
