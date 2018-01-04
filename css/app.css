@@ -65,7 +65,7 @@ h2 small {
   min-height: 150px;
 }
   
-.section.friendly h1 {
+.section.friendly .header h1 {
   color: #aaa;
   overflow: hidden;
   padding: 30px 0 0 40px;
