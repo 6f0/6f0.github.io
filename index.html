@@ -1,43 +1,10 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>0x6f0</title>
-        <meta name="viewport" content="width=device-width">
-        <link rel="stylesheet" type="text/css" href="css/app.css">
-    </head>
-    <body>
+---
+title: Blog
+layout: default
+---
 
-        <div class="container">
-            
-            <h1>0x6f0</h1>
-            <a class="contact" href="./contact.html" onclick="showContact(); return false;">contact</a>
-            <a href="http://github.com/6f0">github</a>
-            <p><a href="/liberate.html">liberate</a></p>
-            <div class="ic">
-                <form id="contact-form" class="contact-form hide">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" class="form-control" name="name" placeholder="Name" />
-                    <label for="email">Email</label>
-                    <input type="text" id="email" class="form-control" name="email" placeholder="Email" />
-                    <label for="subject">Subject</label>
-                    <input type="text" id="subject" class="form-control" name="subject" placeholder="Subject" />
-                    <label for="msg">Message</label>
-                    <textarea id="msg" class="form-control" name="msg" placeholder="Message"></textarea>
-                    <input type="submit" class="btn cf pr" value="Send it" />
-                </form>
-            </div>
-        </div>
-        <script type="text/javascript">
-            function showContact(e) {
-                e = e || window.event;
-                e.preventDefault();
-                var el = document.getElementById('contact-form');
-                if(el) {
-                    el.className += el.className ? ' show' : 'show';
-                }
-            }
-        </script>
-    </body>
-</html>
+{% for post in site.posts %}
+	<div class="post">
+		<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+	</div>
+{% endfor %}

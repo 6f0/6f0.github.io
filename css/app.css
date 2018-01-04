@@ -1,109 +1,330 @@
-.pl {
-  float: left;
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #f1f1f1;
+  background-color: #333;
 }
-.pr {
-  float: right;
+
+a {
+  color: #222;
+  text-decoration: none;
 }
-.hide {
-  display: none;
+
+a:hover,
+a:focus {
+  color: #f9f9f9;
+  text-decoration: underline;
 }
-.show {
+
+p {
+  margin: 0 0 10px;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 2px;
+}
+
+h2 small {
+  color: #aaa;
+  font-size: 12px;
+}
+
+.sidebar ul a {
+  color: #222;
+}
+
+.sidebar ul {
+  color: #ccc;
+  margin-left: -15px;
+}
+
+.sidebar li {
+  color: #f1f1f1;
+  margin-bottom: 10px;
+}
+
+.container {
+  background-color: #666;
+  border: 1px solid #ecf0f1;
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+.section.friendly .header {
+  border-bottom: 1px solid #ecf0f1;
+  border-top: 1px solid #ecf0f1;
+  margin: 0;
+  margin-top: 10px;
+  min-height: 150px;
+}
+  
+.section.friendly h1 {
+  color: #aaa;
+  overflow: hidden;
+  padding: 30px 0 0 40px;
+}
+
+.section.friendly h1 a {
+  color: #aaa;
+  text-decoration: none;
+}
+
+/* =Menu
+-------------------------------------------------------------- */
+
+.menu {
+  background: #565656;
+  border-bottom: 1px solid #ecf0f1;
+  margin: 0 auto 20px;
+  width: 100%
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+}
+
+.menu li {
+  display: inline-block;
+  line-height: 18px;
+  margin-right: 10px;
+}
+
+.menu a {
+  color: #aaa;
   display: block;
+  line-height: 38px;
+  padding: 0 10px;
+  text-decoration: none;
 }
-.contact-form {
+
+.menu li:hover > a{
+  background: #333;
+  color: #fff;
+}
+
+#contact,
+.close {
+  cursor: pointer;
+}
+
+.navbar-btn {
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  right: 25px;
+  top: 38px;
+}
+
+.navbar-btn .icon-bar {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background-color: #ecf0f1;
+  margin-bottom: 3px;
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
+     -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
+          box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+.content {
+  padding: 10px;
+}
+
+.post-desc {
+  margin-bottom: 0px;
+}
+
+.meta-links {
+  margin-top: 2px;
+}
+
+.pag {
+  margin: 20px auto;
+  text-align: center;
+}
+
+.pag a {
+  color: #aaa;
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-image: none;
+  border: 1px solid #ecf0f1;
+  text-decoration: none;
+}
+
+.pag a:focus,
+.pag a:active {
+  color: #f1f1f1;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+.footer {
+  color: #f9f9f9;
+  margin: 0 auto;
+  max-width: 960px;
+  text-align: right;
+}
+
+.footer a {
+  color: #aaa;
+}
+
+.row {
+  margin: 10px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+[class*='col-'] {
+  float: left;
+  margin-right: 5px;
+}
+
+[class*='col-']:last-of-type {
+  margin-right: 0px;
+}
+
+.col-1 {
+  width: 65.5%;
+}
+
+.col-2 {
+  width: 31.1%;
+}
+
+/* 
+Panels
+*/
+
+.panel {
+  background-color: #868686;
+  margin-bottom: 20px;
+  border: 1px solid #ecf0f1;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+}
+
+.panel-body {
+  padding: 15px;
+}
+
+.panel-heading {
+  background: #565656;
+  border-bottom: 1px solid #ecf0f1;
+  padding: 10px 15px;
+}
+
+.panel-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #aaa;
+}
+
+.panel-title > a,
+.panel-title > small,
+.panel-title > .small,
+.panel-title > small > a,
+.panel-title > .small > a {
+  color: inherit;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+@media (max-width: 550px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .section.friendly .header {
+    margin-top: 0;
+    min-height: 0;
+  }
+
+  .section.friendly h1 {
+    padding: 8px 0 8px 20px;
+  }
+
+  .menu li {
+    width: 100%;
+  }
+
+  .menu a {
+    border-bottom: 1px solid #ccc;
     margin: 0 auto;
-    max-width: 450px;
+    margin-left: -40px;
+    padding: 8px 0;
+    padding-left: 40px;
     width: 100%;
-}
+  }
 
-label {
-    color: #666;
-    display: inline-block;
-    font-weight: bold;
-    max-width: 100%;
-    margin-bottom: 5px;
-    margin-top: 15px;
-}
-
-.form-control {
+  .navbar-btn {
     display: block;
-    width: 100%;
-    height: 34px;
-    padding: 6px 12px;
-    font-size: 14px;
-    line-height: 1.42857143;
-    color: #555;
-    background-color: #fff;
-    background-image: none;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
-    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
-    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-}
+  }
 
-.form-control:focus {
-    border-color: #66afe9;
-    outline: 0;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
-}
+  .container {
+    border: none;
+    margin: 0 auto;
+  }
 
-#msg {
-    min-height: 250px;
-}
-
-.btn {
-    display: inline-block;
-    padding: 6px 12px;
-    margin-bottom: 0;
-    font-size: 14px;
-    font-weight: normal;
-    line-height: 1.42857143;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    -ms-touch-action: manipulation;
-    touch-action: manipulation;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    background-image: none;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    border-color: #ccc;
-}
-
-.btn:focus,
-.btn:active:focus,
-.btn.active:focus,
-.btn.focus,
-.btn:active.focus,
-.btn.active.focus {
-    outline: thin dotted;
-    outline: 5px auto -webkit-focus-ring-color;
-    outline-offset: -2px;
-}
-
-.btn:hover,
-.btn:focus,
-.btn.focus {
-    color: #333;
-    text-decoration: none;
-}
-
-.btn:active,
-.btn.active {
-    background-image: none;
-    outline: 0;
-    -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
-    box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
-}
-
-.contact-form .cf {
-  margin-top: 15px;
+  [class*='col-'] {
+    float: none;
+  }
+    
+  .col-1,
+  .col-2 {
+    margin-top: 10px;
+    width: 96%;
+  }
 }

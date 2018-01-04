@@ -1,0 +1,37 @@
+{% include head.html %}
+
+	<div class="container">
+		<div class="section friendly">
+		{% include header.html %}
+
+	<div class="row">
+		<div class="content col-1">
+		{{ content }}
+	</div>
+	<div class="sidebar col-2">
+		<div class="panel trending">
+			<div class="panel-heading">
+				<span class="panel-title">
+                Recent posts
+            	</span>
+            </div>
+        	<div class="panel-body">
+
+        	</div>
+        </div>
+        <div class="panel links">
+        	<div class="panel-heading">
+        		<span class="panel-title">
+        			Links and Info
+                </span>
+            </div>
+            <div class="panel-body">
+            	<ul>
+            		<li>Current <a href="#">my github</a></li>
+            		<li><a href="#">My blog</a></li>
+            	</ul>
+            </div>
+        </div>
+    </div>
+
+{% include footer.html %}
