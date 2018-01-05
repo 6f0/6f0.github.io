@@ -1,10 +1,9 @@
 # Site settings
 title: bmcculley
-email: bmcculley@albany.edu
 description: bmcculley is a lover of unix from New York.
 url: https://bmcculley.github.io
 github_username: bmcculley
 
 # Build settings
 markdown: kramdown
-permalink: pretty
+permalink: ordinal

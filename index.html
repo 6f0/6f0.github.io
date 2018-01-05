@@ -8,5 +8,8 @@ layout: default
 		<div class="post-desc">
 			{{ post.content | strip_html | truncatewords: 50 }}
 		</div>
+		<div class="meta-links">
+			{{ post.date }}
+		</div>
 	</div>
 {% endfor %}
