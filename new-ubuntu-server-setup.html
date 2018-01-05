@@ -1,0 +1,71 @@
+---
+title: New Ubuntu Server Setup
+layout: post
+comments: true
+permalink: new-ubuntu-server-setup.html
+---
+
+
+<p>When first launching a new ubuntu server there are a few steps that should be followed to get things a just a little bit more secure. This won't be an all encompassing guide rather just something to get things moving. For more and possibly better server hardening tips check out the links below.</p>
+        <p>'''from future import links'''</p>
+        <h3>Bare Metal</h3>
+        <p>Originally I wrote this tutorial for setting up a new server on a cloud hosting provider. Those already come setup with an ssh server; but if you've downloaded your ubuntu from the site and are setting it up on a bare metal server, it needs an extra step.</p>
+        <p>First, you'll want to update the repo list</p>
+        <code>sudo apt update</code>
+        <p>Now, it's possible to install the server.</p>
+        <code>sudo apt install -y openssh-server</code>
+        <p>Once it's installed you can start the service.</p>
+        <code>sudo service ssh status</code>
+        <p>And finally if you want to make any changes you can edit the sshd_config file.</p>
+        <code>sudo vi /etc/ssh/sshd_config</code>
+        <p>If you are completing a bare metal install you can go ahead and skip over disabling the root user and creating another user as that's already taken care during the install process.</p>
+        <h3>Rid Root First</h3>
+        <p>After initially launching the server all you'll most likely have is a root login. Go ahead and use it to log into your server.</p>
+        <p><code>ssh root@ip_address</code></p>
+        <p>Once in you'll want to add a new user, in this case we'll plan on using this account as the main login account.</p>
+        <p><code>adduser newuser</code></p>
+        <p>Be sure to set a strong password for the account here. After that there will be a number of questions, do as you please with those.</p>
+        <h3>Privileges</h3>
+        <p>We'll also plan on using this account to complete administrative tasks on the server. To do this we'll just add this user to the sudo group.</p>
+        <p><code>usermod -aG sudo sammy</code></p>
+        <h3>Public Key Auth</h3>
+        <p>Next we'll add public key authentication to the server, this will make it a bit more secure than password auth which we'll remove in a future step. If you don't already have a ssh key setup we'll take care of that now.</p>
+        <p>To generate a key pair run the following command in your local terminal:</p>
+        <p><code>ssh-keygen -t rsa -b 4096 -C "email@example.com"</code></p>
+        <p>Follow the next steps in setting up the key, setting the name, location, and a pass phrase as desired.</p>
+        <p>Next we can copy the public key to the new server. There are a couple ways to go about this. First we will look at using ssh-copy-id which is pretty straight forward, just enter:</p>
+        <p><code>ssh-copy-id newuser@ip_address</code></p>
+        <p>This will automatically copy your public key over, you can verify everything by check in the ~/.ssh/authorized_keys file on the server.</p>
+        <p>It's also possible to copy it manually. To do this you'll first have to grab the public key from your local machine. This can be found in the ~/.ssh folder, you'll want to get the contents of the id_rsa.pub file. Once you have that in the clipboard create the ~/.ssh/authorized_keys on the server and paste the contents in there.</p>
+        <p>Next check the permissions on the ~/.ssh directory, they should be 700. They can be changed with the following command:</p>
+        <p><code>chmod 700 ~/.ssh</code></p>
+        <p>The authorized_keys file permissions should be 600, set those with the following command:</p>
+        <p><code>chmod 600 ~/.ssh/authorized_keys</code></p>
+        <h3>Remove Root login and Password Auth</h3>
+        <p>Now that we have all that setup the next step is to remove the root login and to disable password auth. To do this you'll have to the sshd_config file. Fire up your favorite terminal text editor and let's go.</p>
+        <p><code>vi /etc/ssh/sshd_config</code></p>
+        <p>You'll have to search through the file but make sure the following get changed or are set to:</p>
+        <p><code>PasswordAuthentication no
+        PubkeyAuthentication yes
+        ChallengeResponseAuthentication no
+        PermitRootLogin no</code>
+        After you're finished editing that file, the ssh daemon needs to be reloaded for those changes to take effect.</p>
+        <p><code>systemctl reload sshd</code></p>
+        <p>Finally test to make sure that your login works.</p>
+        <h3>Basic UFW setup</h3>
+        <p>To add a little bit more security let's enable the uncomplicated firewall (UFW). We'll assume that we're in our 'newuser' account for this. The first step is to allow ssh:</p>
+        <p><code>sudo ufw allow ssh</code></p>
+        <p>Note: this also assumes that we're using the default ssh port.</p>
+        <p>Next we can enable the firewall:</p>
+        <p><code>sudo ufw enable</code></p>
+        <p>Next you'll want to view other applications on your server and allow them as necessary:</p>
+        <p><code>sudo ufw app list</code></p>
+        <p>This isn't all that should be done for security but this is as far as we're going in this simple little tutorial. I'll come back and add links to more advanced server security later.</p>
+        <h3>Setting up a new apt repo</h3>
+        <p>On a fresh install you may want to add additional repositories, in this case you may find this error message: </p>
+        <p><code>sudo: add-apt-repository: command not found</code></p>
+        <p>What a bummer...don't worry though, all you need to do is install the software-properties-common package:</p>
+        <p><code>sudo apt-get install software-properties-common python-software-properties</code></p>
+        <p>Once this is installed you can go ahead add the new repo, run an apt-get update and finally install your new package.</p>
+        <h3>Final Note</h3>
+        <p>As noted a few times throughout this isn't an all encompassing guide but rather a quick starting point to make a brand new server a little bit more secure from all the evil out there in the big wide world. I hope you found this little tutorial helpful if you find an error or feel that I've missed something please go ahead and leave it in a comment below! I'd really appreciate it and I'm sure the other people stopping by would too.</p>
