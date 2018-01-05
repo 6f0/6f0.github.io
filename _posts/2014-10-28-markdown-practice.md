@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Markdown practice
+comments: true
 ---
 
 # HTML Ipsum Presents
@@ -19,7 +20,7 @@ title: Markdown practice
 - Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
 - Aliquam tincidunt mauris eu risus.
  
-![cat gif](http://i.imgur.com/v1gUYem.gif)
+![cat gif](https://i.imgur.com/v1gUYem.gif)
  
 ```css
 #header h1 a { 
