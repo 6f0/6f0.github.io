@@ -1,0 +1,110 @@
+---
+title: Hints for nebula exploit exercises
+layout: bare
+comments: true
+permalink: nebula-hints.html
+---
+
+<p>I would assume that if you're already here looking for this you probably already know about <a href="https://exploit-exercises.com">exploit exercises</a>. But if not, go check out the site and specifically the <a href="https://exploit-exercises.com/nebula/">nebula exercise</a> that corresponds to this page.</p>
+
+<h2>level00</h2>
+
+<p>look at the setuid man page to learn more about it what it does.</p>
+
+<p>Find out how to locate files/executables with a setuid bit</p>
+
+<p>$ find / -perm /u=s -user flag00</p>
+
+<p>work your magic...</p>
+
+<h2>level01</h2>
+
+<p>know about how linux finds executables and symbolic links</p>
+
+<p>recognize that the program has a vulnerability in the way it envokes 
+echo. use the knowledge from the first step to exploit this knowledge</p>
+
+
+<h2>level02</h2>
+
+<p>For this level we can see that the programmer is wise to us changing the 
+bin directory but that they are still pulling in a username which we
+control...</p>
+
+
+<h2>level03</h2>
+
+<p>As it says crontab runs every few minutes; from checking the script in 
+flag03's home directory we can see what's happening just find a way to
+exploit it</p>
+
+<p>I choose to just create a simple shell script:</p>
+
+<p>[redacted]</p>
+
+<p>but I'm thinking another interesting thing would be to create a setuid
+program and have the cron update everything so we having lasting permissions 
+as flag03</p>
+
+<h2>level04</h2>
+
+<p>In this level again, a knowledge of symbolic links is key</p>
+
+<h2>level05</h2>
+
+<p>This level requires some knowledge of unix file permissions so you can snoop 
+around for juicy looking files. Finally an understanding of how the SSH 
+encryption and connection process works [1]</p>
+
+<ol>
+<li><a href="https://www.digitalocean.com/community/tutorials/understanding-the-ssh-encryption-and-connection-process">understanding the ssh encryption and connection process (digitalocean tut)</a></li>
+</ol>
+
+<h2>level06</h2>
+
+<p>As said in the description a knowledge of how unix systems stored passwords;
+once that part is figured out. John the ripper can help with the rest.</p>
+
+<h2>level07</h2>
+
+<p>To start cd to the flag07 directory and have a look at the files, from there 
+it's possible to find enough information to get started. Now all that's 
+left is to find a way to inject getflag.</p>
+
+<strong>Bonus hint:</strong>
+
+<p>Make sure to properly URL encode</p>
+
+<h2>level08</h2>
+
+<p>those pesky file permissions again, just poke around in flag08's home 
+directory to see what juicy files we can get our eyes on. </p>
+
+<strong>Bonus hint:</strong>
+
+<p>WireShark Analyze &gt; follow &gt; tcp </p>
+
+<h2>level09</h2>
+
+<p>very interesting, after trying the usual exploits i stumbled across 
+the possibility of doing something like this:</p>
+
+<p>which works! However, after all that time I spent figuring that out 
+it turns out 'flag09 -a' gives you the interactive command line as the
+flag09 user! Trivial from there...so simple yet for me; so hard to find</p>
+
+<h2>level10</h2>
+
+<p>interesting, trying various things to solve this one and then...
+in my home directory there's a file called x. I go ahead and take a look in
+there and low and behold it seems to be a token. It worked to sign into 
+flag10 but that's not how it was supposed to go...</p>
+
+<p>I'll have to work on finding the real way of exploiting this one</p>
+
+
+<h2>That's all</h2>
+
+<p>That's as far as I had time to get so far. I hope that you found these hints helpful without spoiling the fun.</p>
+
+<p>Anything else let me know in the comments below.</p>
