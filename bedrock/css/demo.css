@@ -1,0 +1,15 @@
+.gd [class*='col-'] {
+	border: 1px solid #e9e9e9;
+	padding: 4px 0;
+	text-align: center;
+}
+
+.colophon {
+	border-top: 1px solid #ccc;
+	clear: both;
+}
+
+.muted {
+	color: #6b6b6b;
+	font-size: 18px;
+}
