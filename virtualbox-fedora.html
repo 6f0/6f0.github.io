@@ -1,0 +1,45 @@
+---
+title: Install VirtualBox 5.2 on Fedora 26/27
+layout: bare
+comments: true
+permalink: virtualbox-fedora.html
+---
+
+<p>Previously I had been able to pull down the VirtualBox rpm, install and 
+go. Lately however, I've been running into trouble with the kernel modules. 
+These are the steps I took to get around the issue, I did this a while ago 
+and am writing this from memory so if I miss something let me know in the 
+comments and I'll make the updates.</p>
+
+<strong>Swith to root User</strong>
+
+<p>The following steps will require root permissions.</p>
+<code>sudo su -</code>
+
+<p>Grab the Oracle public key and import it</p>
+
+<code>wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | rpm --import -</code>
+
+<p>Pull down the repo file</p>
+
+<code>cd /etc/yum.repos.d/ && wget https://download.virtualbox.org/virtualbox/rpm/fedora/virtualbox.repo</code>
+
+<p>Update the package list</p>
+
+<code>dnf update</code>
+
+<p>Install VirtualBox</p>
+
+<code>dnf install VirtualBox-5.2</code>
+
+<strong>If you need to compile the kernel modules</strong>
+
+<p>Install the necessary packages</p>
+
+<code>dnf install binutils gcc make patch libgomp glibc-headers glibc-devel kernel-headers kernel-devel dkms</code>
+
+<p>Build/rebuild the kernel modules</p>
+
+<code>/usr/lib/virtualbox/vboxdrv.sh setup</code>
+
+<p>After following these steps you should have a working VirtualBox install.</p>
