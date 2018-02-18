@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Vulnhub - RickdiculouslyEasy: 1
+title: Vulnhub - RickdiculouslyEasy:: 1
 comments: true
 tags: CTF
 ---
