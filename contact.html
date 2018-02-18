@@ -6,7 +6,11 @@ permalink: contact.html
 ---
 
 
-<p><a href="http://www.google.com/recaptcha/mailhide/d?k=0198-P96BWRii_5sD8sKB5qg==&c=uATx2-o6ookQlqKHDuzkz8-Nk4qQIFRk3_TMO-E67Uo=" target="_blank">Reveal my email address</a></p>
+<div id="showmail"></div>
+<noscript><p><a href="http://www.google.com/recaptcha/mailhide/d?k=0198-P96BWRii_5sD8sKB5qg==&c=uATx2-o6ookQlqKHDuzkz8-Nk4qQIFRk3_TMO-E67Uo=" target="_blank">Reveal my email address</a></p></noscript>
 
 <p>bbl</p>
 
+<script type="text/javascript">
+    document.getElementById('showmail').innerHTML += "<p><a href=\"#\" onClick=\"window.open('http://www.google.com/recaptcha/mailhide/d?k=0198-P96BWRii_5sD8sKB5qg==&c=uATx2-o6ookQlqKHDuzkz8-Nk4qQIFRk3_TMO-E67Uo=','pagename','resizable,height=400,width=500'); return false;\">Reveal my email address</a></p>";
+</script>
