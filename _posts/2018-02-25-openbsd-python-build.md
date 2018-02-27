@@ -31,3 +31,13 @@ Next pull down the python source code, following by in my case the [necessary
 patches](https://cvsweb.openbsd.org/cgi-bin/cvsweb/ports/lang/python/3.6/) thank
 you to the maintainers for keeping this going and making things very easy on me. 
 Finally apply the patches and build python
+
+**Note:** I ended up running into some issues later on, I wanted to run this from 
+my home directory. However this ended up causing issues when trying to create a 
+virtualenv. I found this [answer on stackoverflow](https://stackoverflow.com/a/5001555) 
+which explained that when running the config you should tell the path you are planning 
+to install to. Example:
+
+`./configure --prefix=/home/install/python`
+
+Hope this helps some people save some time and headaches.
