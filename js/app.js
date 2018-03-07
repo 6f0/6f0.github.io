@@ -1,6 +1,10 @@
 $(document).ready(function() {
     var error = false;
     
+    // see if the style should be light
+    if (getCookie('style') !== undefined) {
+        switch_stylesheet();
+    }    
 
     // menu functions
     show_hide_menu();
@@ -66,9 +70,25 @@ function show_hide_menu() {
     }
 }
 
+function setCookie(key, value) {
+    var expires = new Date();
+    expires.setTime(expires.getTime() + (365 * 24* (60* (60 * 1000))));
+    document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
+}
+
+function getCookie(key) {
+    var keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
+    return keyValue ? keyValue[2] : null;
+}
+
 function switch_stylesheet() {
-    // maybe set a cookie to track the current stylesheet
-    // then it would be possible to switch back and forth 
     $('link[rel=stylesheet]').remove();
-    $('head').append('<link rel="stylesheet" type="text/css" href="css/light.css">');
+    var cookie_value = getCookie('style');
+    if (cookie_value === 0 || cookie_value === undefined) {
+        $('head').append('<link rel="stylesheet" type="text/css" href="/css/light.css">');
+        setCookie('style', 1);
+    } else {
+        $('head').append('<link rel="stylesheet" type="text/css" href="/css/app.css">');
+        setCookie('style', 0);
+    }
 }
