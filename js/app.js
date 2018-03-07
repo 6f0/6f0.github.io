@@ -86,9 +86,9 @@ function switch_stylesheet() {
     var cookie_value = getCookie('style');
     if (cookie_value === 0 || cookie_value === undefined) {
         $('head').append('<link rel="stylesheet" type="text/css" href="/css/light.css">');
-        setCookie('style', 1);
+        setCookie('style', 0);
     } else {
         $('head').append('<link rel="stylesheet" type="text/css" href="/css/app.css">');
-        setCookie('style', 0);
+        setCookie('style', 1);
     }
 }
