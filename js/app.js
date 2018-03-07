@@ -66,3 +66,9 @@ function show_hide_menu() {
     }
 }
 
+function switch_stylesheet() {
+    // maybe set a cookie to track the current stylesheet
+    // then it would be possible to switch back and forth 
+    $('link[rel=stylesheet]').remove();
+    $('head').append('<link rel="stylesheet" type="text/css" href="css/light.css">');
+}
