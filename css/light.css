@@ -98,7 +98,6 @@ h2 small {
 
 .menu {
   background: #565656;
-  border-bottom: 1px solid #ecf0f1;
   margin: 0 auto 20px;
   width: 100%
 }
@@ -144,11 +143,11 @@ h2 small {
   display: block;
   width: 18px;
   height: 2px;
-  background-color: #ecf0f1;
+  background-color: #565656;
   margin-bottom: 3px;
-  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
-     -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
-          box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
+  -webkit-box-shadow: 0 1px 0 rgba(52, 52, 52, 0.25);
+     -moz-box-shadow: 0 1px 0 rgba(52, 52, 52, 0.25);
+          box-shadow: 0 1px 0 rgba(52, 52, 52, 0.25);
 }
 
 .content {
@@ -300,6 +299,7 @@ Panels
 
 @media (max-width: 550px) {
   body {
+    background-color: #f9f9f9;
     margin: 0;
     padding: 0;
   }
@@ -343,5 +343,9 @@ Panels
   .col-2 {
     margin-top: 10px;
     width: 96%;
+  }
+  
+  .footer {
+    margin: 0 10px;
   }
 }
