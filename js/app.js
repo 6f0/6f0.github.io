@@ -1,10 +1,5 @@
 $(document).ready(function() {
-    var error = false;
-    
-    // see if the style should be light
-    if (getCookie('style') !== undefined) {
-        switch_stylesheet();
-    }    
+    var error = false;  
 
     // menu functions
     show_hide_menu();
