@@ -5,6 +5,11 @@ comments: true
 tags: development
 ---
 
+**Note:** If there are patches for the software you want available in 
+the ports tree, you probably want to look at the 
+[working with ports](https://www.openbsd.org/faq/ports/ports.html) 
+page. However, if you want to customize your build further read on. 
+
 At the time of this writing I am in the process of building python 3.6.4.
 The build process could change in the future, but this is current build 
 process, hopefully this will give someone the jumpstart they need to get 
