@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Building Python on Ubuntu (16.04)
+title: Building Python on Ubuntu 16.04
 comments: true
 tags: development, chroot
 ---
@@ -11,7 +11,7 @@ another post about building python on docker.
 
 In this post I'm going to look at creating a chroot environment and then 
 setting that up to complete the build. To setup the chroot environment I 
-am going to be following along with this community post https://help.ubuntu.com/community/BasicChroot
+am going to be following along with this [community post](https://help.ubuntu.com/community/BasicChroot)
 Let's get started by installing the necessary packages
 
 `sudo apt-get install -y schroot debootstrap`
