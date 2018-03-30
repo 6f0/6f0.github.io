@@ -36,7 +36,9 @@ Next find a mirror site that works best from here and using that url
 run the following (where `http://mirror.example.com/ubuntu/` is replaced by 
 the appropriate url)
 
-`sudo debootstrap --variant=buildd --arch amd64 xenial /var/xenial/ http://mirror.example.com/ubuntu/`
+```
+sudo debootstrap --variant=buildd --arch amd64 xenial /var/xenial/ http://mirror.example.com/ubuntu/
+```
 
 In order to have network connection copy the following into the chroot:
 
