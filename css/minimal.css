@@ -1,0 +1,353 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+  background-color: #fff;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+code {
+  border: 1px solid #74b9ff;
+  color: #333;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  overflow: auto;
+  padding: 3px;
+  word-break: break-word;
+}
+
+pre code {
+  border: 1px solid #74b9ff;
+  display: block;
+  font-weight: lighter;
+  color: #333;
+  padding: 3px;
+  word-break: break-word;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+p {
+  margin: 0 0 10px;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 2px;
+}
+
+h2 small {
+  color: #525252;
+  font-size: 12px;
+}
+
+.sidebar ul a {
+  color: #333;
+}
+
+.sidebar ul {
+  color: #ccc;
+  margin-left: -15px;
+}
+
+.sidebar li {
+  color: #525252;
+  margin-bottom: 10px;
+}
+
+.container {
+  background-color: #fff;
+  border: 1px solid #525252;
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+.section.friendly .header {
+  margin: 0;
+  margin-top: 10px;
+  min-height: 150px;
+}
+  
+.section.friendly .header h1 {
+  color: #525252;
+  overflow: hidden;
+  padding: 44px 0 0 40px;
+}
+
+.section.friendly h1 a {
+  color: #525252;
+  text-decoration: none;
+}
+
+/* =Menu
+-------------------------------------------------------------- */
+
+.menu {
+  background: #fff;
+  border-bottom: 1px solid #525252;
+  border-top: 1px solid #525252;
+  margin: 0 auto 20px;
+  width: 100%
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+}
+
+.menu li {
+  display: inline-block;
+  line-height: 18px;
+  margin-right: 10px;
+}
+
+.menu a {
+  color: #333;
+  display: block;
+  line-height: 38px;
+  padding: 0 10px;
+  text-decoration: none;
+}
+
+.menu li:hover > a{
+  background: #333;
+  color: #fff;
+}
+
+#contact,
+.close {
+  cursor: pointer;
+}
+
+.navbar-btn {
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  right: 25px;
+  top: 38px;
+}
+
+.navbar-btn .icon-bar {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background-color: #565656;
+  margin-bottom: 3px;
+  -webkit-box-shadow: 0 1px 0 rgba(52, 52, 52, 0.25);
+     -moz-box-shadow: 0 1px 0 rgba(52, 52, 52, 0.25);
+          box-shadow: 0 1px 0 rgba(52, 52, 52, 0.25);
+}
+
+.content {
+  padding: 10px;
+}
+
+.post-desc {
+  margin-bottom: 0px;
+}
+
+.meta-links {
+  margin-top: 2px;
+}
+
+.pag {
+  margin: 20px auto;
+  text-align: center;
+}
+
+.pag a {
+  color: #aaa;
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-image: none;
+  border: 1px solid #ecf0f1;
+  text-decoration: none;
+}
+
+.pag a:focus,
+.pag a:active {
+  color: #525252;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+.footer {
+  color: #888;
+  margin: 0 auto;
+  max-width: 960px;
+  text-align: right;
+}
+
+.footer a {
+  color: #aaa;
+}
+
+.row {
+  margin: 10px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+[class*='col-'] {
+  float: left;
+  margin-right: 5px;
+}
+
+[class*='col-']:last-of-type {
+  margin-right: 0px;
+}
+
+.col-1 {
+  width: 65.5%;
+}
+
+.col-2 {
+  width: 31.1%;
+}
+
+/* 
+Panels
+*/
+
+.panel {
+  background-color: #fff;
+  margin-bottom: 20px;
+  border: 1px solid #525252;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+}
+
+.panel-body {
+  padding: 15px;
+}
+
+.panel-heading {
+  background: #fff;
+  border-bottom: 1px solid #525252;
+  padding: 10px 15px;
+}
+
+.panel-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.panel-title > a,
+.panel-title > small,
+.panel-title > .small,
+.panel-title > small > a,
+.panel-title > .small > a {
+  color: inherit;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+@media (max-width: 550px) {
+  body {
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+  }
+
+  .section.friendly .header {
+    margin-top: 0;
+    min-height: 0;
+  }
+
+  .section.friendly .header h1 {
+    padding: 8px 0 8px 20px;
+  }
+
+  .menu li {
+    width: 100%;
+  }
+
+  .menu a {
+    border-bottom: 1px solid #ccc;
+    margin: 0 auto;
+    margin-left: -40px;
+    padding: 8px 0;
+    padding-left: 40px;
+    width: 100%;
+  }
+
+  .navbar-btn {
+    display: block;
+  }
+
+  .container {
+    border: none;
+    margin: 0 auto;
+  }
+
+  [class*='col-'] {
+    float: none;
+  }
+    
+  .col-1,
+  .col-2 {
+    margin-top: 10px;
+    width: 96%;
+  }
+  
+  .footer {
+    margin: 0 10px;
+  }
+}
