@@ -1,5 +1,5 @@
 function loadScripts() {
-    var scripts= ["https://bmcculley.github.io/js/jquery.min.js", "https://bmcculley.github.io/js/app.js"];
+    var scripts= ["/js/jquery.min.js", "/js/app.js"];
     for (var i = 0; i < scripts.length; i++) {
         setTimeout(function() {
             var script = document.createElement("script");
