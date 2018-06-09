@@ -1,4 +1,7 @@
 $(document).ready(function() {
+    // load css
+    add_css();
+    
     var error = false;  
 
     // menu functions
@@ -86,4 +89,8 @@ function switch_stylesheet() {
         $('head').append('<link rel="stylesheet" type="text/css" href="/css/app.css">');
         setCookie('style', 1);
     }
+}
+
+function add_css() {
+    $('head').append('<link rel="stylesheet" type="text/css" href="/css/minimal.min.css">');
 }

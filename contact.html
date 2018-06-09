@@ -6,11 +6,16 @@ permalink: contact.html
 ---
 
 
-<div id="showmail"></div>
-<noscript><p><a href="http://www.google.com/recaptcha/mailhide/d?k=0198-P96BWRii_5sD8sKB5qg==&c=uATx2-o6ookQlqKHDuzkz8-Nk4qQIFRk3_TMO-E67Uo=" target="_blank">Reveal my email address</a></p></noscript>
+		<div style="max-width:96%">
+			<h1> Contact me </h1>
+			<form action="https://mail.lvl86.com/user/<token>" method="post">
+				<label for="email">Email</label><br>
+				<input class="form-control" id="email" name="email" type="text"><br>
+                <label for="name">Name</label><br>
+                <input class="form-control" id="name" name="name" type="text"><br>
+                <label for="message">Message</label><br>
+                <textarea class="form-control" id="message" name="message" cols="40" rows="5"></textarea>
+                <input value="Send Message" type="submit">
+            </form>
 
-<p>bbl</p>
-
-<script type="text/javascript">
-    document.getElementById('showmail').innerHTML += "<p><a href=\"#\" onClick=\"window.open('http://www.google.com/recaptcha/mailhide/d?k=0198-P96BWRii_5sD8sKB5qg==&c=uATx2-o6ookQlqKHDuzkz8-Nk4qQIFRk3_TMO-E67Uo=','pagename','resizable,height=400,width=500'); return false;\">Reveal my email address</a></p>";
-</script>
+		</div>
