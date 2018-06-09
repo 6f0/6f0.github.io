@@ -8,4 +8,8 @@ function loadScripts() {
             document.getElementsByTagName("head")[0].appendChild(script);
         }, 500);
     }
+    var linkElement = document.createElement("link");
+    linkElement.rel = "stylesheet";
+    linkElement.href = "/css/minimal.min.css";
+    document.head.appendChild(linkElement);
 }

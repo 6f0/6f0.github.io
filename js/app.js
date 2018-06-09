@@ -1,7 +1,4 @@
 $(document).ready(function() {
-    // load css
-    add_css();
-    
     var error = false;  
 
     // menu functions
