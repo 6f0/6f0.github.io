@@ -200,10 +200,12 @@ h2 small {
 }
 
 .footer {
-  color: #888;
-  margin: 0 auto;
-  max-width: 960px;
-  text-align: right;
+  border-top: 1px solid #525252;
+  color:#888;
+  margin:0 auto;
+  max-width:960px;
+  padding: 5px 10px;
+  text-align:right;
 }
 
 .footer a {
