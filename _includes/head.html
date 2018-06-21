@@ -6,9 +6,9 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>{% if page.title %} {{ page.title }} |{% endif %} {{ site.title }}</title>
       {% if page.description %}
-      <meta name="description" content="{{ site.description }}">
-      {% else %}
       <meta name="description" content="{{ page.description }}">
+      {% else %}
+      <meta name="description" content="{{ site.description }}">
       {% endif %}
       <link rel="icon" type="image/x-icon" href="{{site.cloudfront_url}}/favicon.ico">
       <noscript>
