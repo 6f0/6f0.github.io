@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Building Python on Ubuntu 16.04
+description: Notes for building python in a chroot on Ubuntu 16.04.
 comments: true
 tags: development, chroot
 ---

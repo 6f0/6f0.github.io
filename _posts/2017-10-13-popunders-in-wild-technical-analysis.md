@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Popunders In The Wild Technical Analysis
+description: An in depth analysis of popunders found on a live website in the wild.
 comments: true
 tags: reverse engineering
 ---
@@ -51,7 +52,7 @@ For this part, I know that I'm looking for click events. So I used chrome dev to
 
 ![event listener breakpoints mouse events](/imgs/mouse-events.png)
 
-This time I can see that it pauses on application.js line 1, column 782 (I decided to use the minified version for testing). The script checks that it hasn't already shown me a popunder and in this case it hasn't so it continues on and checks the browser type and phone type again, in this case I have it set to chrome and android so it continues on to the else clause and stores the current window location in o, then opens a new window and stores that in t. From there it replaces the location of the new tab with the current location of the original tab. Next it updates the original tabs location to the trafficjanky url, they use some regex to get the url setup from it's stored format. Finally the localstorage variable puTargetURL that was set earlier is used to redirect the new tab to the page that the user (me in this case) actually wanted, it used the bit of javascript I showed at the begining of the post to redirect on the actual new tab page as it can't be done from the original tab.
+This time I can see that it pauses on application.js line 1, column 782 (I decided to use the minified version for testing). The script checks that it hasn't already shown me a popunder and in this case it hasn't so it continues on and checks the browser type and phone type again, in this case I have it set to chrome and android so it continues on to the else clause and stores the current window location in o, then opens a new window and stores that in t. From there it replaces the location of the new tab with the current location of the original tab. Next it updates the original tabs location to the trafficjunky url, they use some regex to get the url setup from it's stored format. Finally the localstorage variable puTargetURL that was set earlier is used to redirect the new tab to the page that the user (me in this case) actually wanted, it used the bit of javascript I showed at the beginning of the post to redirect on the actual new tab page as it can't be done from the original tab.
 
 ![else clause code](/imgs/testing.png)
 

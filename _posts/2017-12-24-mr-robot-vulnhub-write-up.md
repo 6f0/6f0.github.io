@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Mr Robot - vulnhub write up
+description: A writeup of my experience with the Mr Robot boot2root box.
 comments: true
 tags: CTF
 ---

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Protonmail Dark Pattern?
+description: Is protonmail trying to get taps?
 comments: true
 tags: dark patterns
 ---
@@ -11,5 +12,6 @@ Now it seems that protonmail is doing something similar in that I navigate to th
 about to click
 
 ![oh that's shady](imgs/protonmail-app.png)
+(This is not the right screenshot, idk.)
 
 I'm not sure though is this considered a dark pattern? But, whatever it is, does this actually end up benefiting them? Do more people end up installing their apps? And if more people do install their app, what is the benefit for them? Is it to save bandwidth or are they able to track their users more closely? If it's the later, why would a company based on privacy and security want or need more information about their users?

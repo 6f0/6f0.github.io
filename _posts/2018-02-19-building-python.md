@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Building Python on Ubuntu 14.04
+description: Some notes on compiling python on ubuntu 14.04.
 comments: true
 tags: development
 ---

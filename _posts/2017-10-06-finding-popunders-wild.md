@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Finding Popunders In The Wild
+description: Taking a brief look at popunders out in the wild.
 comments: true
 tags: reverse engineering
 ---

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Building Python on OpenBSD 6.2 
+description: Some notes on compiling python on OpenBSD, get the latest python on OpenBSD.
 comments: true
 tags: development
 ---

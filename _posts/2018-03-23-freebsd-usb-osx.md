@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Creating a FreeBSD bootable USB on OS X
+description: Some notes on creating a bootable FreeBSD USB on Mac OS X.
 comments: true
 tags: system installation, freebsd
 ---

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Vulnhub - RickdiculouslyEasy&#58; 1
+description: A writeup of my experience with the RickdiculouslyEasy boot2root box.
 comments: true
 tags: CTF
 ---
