@@ -1,6 +1,6 @@
 ---
 layout: post
-title: A bit about Python Metaclasses
+title: Exploring Python Metaclasses
 description: Using the type function to define metaclasses dynamically.
 comments: true
 tags: development, python
