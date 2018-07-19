@@ -7,6 +7,11 @@ body {
 }
 
 a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+h2 a {
   color: #333;
   text-decoration: none;
 }
@@ -266,6 +271,23 @@ Panels
 .panel-title > small > a,
 .panel-title > .small > a {
   color: inherit;
+}
+
+.btn {
+  font-family: Arial;
+  color: #fff;
+  background: #55efc4;
+  border:1px solid #00b894;
+  font-size: 30px;
+  padding: 15px 92px 15px 92px;
+  text-decoration: none;
+  text-shadow: 1px 2px 2px rgba(150, 150, 150, 1);
+}
+
+.btn:hover {
+  background: #00b894;
+  color: #ffffff;
+  text-decoration: none;
 }
 
 /*
