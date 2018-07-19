@@ -1,5 +1,10 @@
-Setting up MariaDB on FreeBSD
------------------------------
+---
+layout: post
+title: Setting up MariaDB on FreeBSD
+description: Building and installing MariaDB on FreeBSD and what to do if it doesn't start.
+comments: true
+tags: sysadmin, freebsd
+---
 
 This will briefly cover building from source and some notes for some 
 silly mistakes that I made and how to "fix" them or at least get things 
@@ -117,6 +122,12 @@ You can check the status:
 
 ```bash
 # service mysql-server status
+```
+
+Output:
+
+```bash
+mysql is running as pid <int>.
 ```
 
 ### Securing the install
