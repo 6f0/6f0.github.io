@@ -68,6 +68,9 @@ file:
 2018-07-19  2:23:30 34424840192 [ERROR] Aborting
 ```
 
+**Note:** In FreeBSD you'll be able to find the MariaDB log file here 
+`/var/db/mysql/<hostname>.err`.
+
 ### Starting
 
 ```bash
