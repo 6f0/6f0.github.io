@@ -330,6 +330,10 @@ Panels
     padding: 8px 0 8px 20px;
   }
 
+  .menu {
+    display: none;
+  }
+
   .menu li {
     width: 100%;
   }
