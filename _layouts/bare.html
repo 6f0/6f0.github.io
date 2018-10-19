@@ -30,4 +30,40 @@ layout: compress
         </script>
         <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         {% endif %}
+        <script type="text/javascript">
+            function post(data) {
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST", 'https://v3.ejank.com/', true);
+                xhr.setRequestHeader('Content-Type', 'application/json');
+                xhr.send(JSON.stringify({
+                    'siteKey':'bmcculley',
+                    'networkLatency': data.networkLatency, 
+                    'renderTime': data.renderTime,
+                    'loadTime': data.loadTime,
+                    'domRenderTime': data.domRenderTime,
+                    'redirectCount': data.redirectCount,
+                    'resources': data.resources
+                }));
+            }
+            
+          window.onload = function(){
+            setTimeout(function(){
+                var t = performance.timing;
+                var networkLatency = t.responseEnd - t.fetchStart;
+                var renderTime = t.loadEventEnd - t.responseEnd;
+                var loadTime = t.loadEventEnd - t.navigationStart;
+                var domRenderTime = t.domComplete - t.domLoading;
+                var redirectCount = performance.navigation.redirectCount;
+                var resources = window.performance.getEntriesByType("resource");
+                var pageData = [];
+                pageData.networkLatency = networkLatency;
+                pageData.renderTime = renderTime;
+                pageData.loadTime = loadTime;
+                pageData.domRenderTime = domRenderTime;
+                pageData.redirectCount = redirectCount;
+                pageData.resources = resources;
+                post(pageData);
+            }, 0);
+          }
+        </script>
     </div>
