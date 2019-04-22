@@ -1,9 +1,9 @@
 # Site settings
 title: bmcculley
-description: A Freelance Python Developer. Looking for a programmer for hire? Get a professional with 10+ years Python experience and get your project completed today.
+description: bmcculley is a freelance Python developer with 10+ years of experience with project development and management that results in 100% customer satisfaction.
 url: https://bmcculley.ejank.com
 github_username: bmcculley
-cloudfront_url: https://static.ejank.com
+cloudfront_url: https://bmcculley.ejank.com
 
 # Build settings
 markdown: kramdown
