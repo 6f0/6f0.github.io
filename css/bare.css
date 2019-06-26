@@ -2,6 +2,10 @@ p {
   margin: 0 0 10px;
 }
 
+ul {
+    margin-left: -10px;
+}
+
 img {
   height: auto;
   max-width: 100%;
@@ -37,7 +41,7 @@ pre code {
 
 [class*='col-'] {
   float: right;
-  margin-left: 5px;
+  margin-left: 20px;
 }
 
 .col-1 {
