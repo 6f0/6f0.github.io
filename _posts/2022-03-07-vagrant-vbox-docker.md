@@ -60,3 +60,7 @@ Changing the groups of a user does not change existing logins, terminals, and sh
 newgrp docker
 ```
 
+### Here's the full gist
+
+{% gist 99dfcc1a8957ab735c5db4d02ed0d8fe %}
+
