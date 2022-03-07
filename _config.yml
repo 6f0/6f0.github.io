@@ -1,9 +1,9 @@
 # Site settings
 title: bmcculley
-description: bmcculley is a freelance Python developer with 10+ years of experience with project development and management that results in 100% customer satisfaction.
-url: https://bmcculley.ejank.com
+description: Just another blog on the internet.
+url: https://bmcculley.github.io
 github_username: bmcculley
-cloudfront_url: https://bmcculley.ejank.com
+cloudfront_url: https://bmcculley.github.io
 
 # Build settings
 markdown: kramdown
