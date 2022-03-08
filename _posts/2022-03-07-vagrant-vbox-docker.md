@@ -10,7 +10,7 @@ Creating an Ubuntu VirtualBox and installing Docker.
 
 Vagrantfile
 
-```bash
+```ruby
 Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/bionic64"
   
