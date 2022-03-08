@@ -22,3 +22,17 @@ $ packer build -var 'headless=true' -only=virtualbox-iso ubuntu-18.04-amd64.json
 ```
 
 That's all I needed and likely all you need if you're having this issue as well. As long as you have ran `sudo /sbin/vboxconfig` and have the modules successfully loaded.
+
+## Use the Packer Image with Vagrant
+
+Either move into or copy the image to your current directory and use the following commands.
+
+```bash
+vagrant box add ubuntu18 ubuntu-1804.box
+
+vagrant init ubuntu18
+
+vagrant up
+```
+
+Enjoy your new Virtual Box!
