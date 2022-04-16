@@ -196,7 +196,7 @@ h2 small {
 }
 
 .footer {
-  color: #888;
+  color: #666;
   margin: 0 auto;
   max-width: 960px;
   text-align: right;
@@ -345,5 +345,47 @@ Panels
   
   .footer {
     margin: 0 10px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #2d3436;
+    color: #fff;
+  }
+  
+  .container {
+    background-color: #4a5568ff;
+    border: transparent;
+  }
+
+  .section.friendly .header h1,
+  .section.friendly h1 a {
+    color: #fff;
+  }
+
+  a {
+    color: salmon;
+  }
+
+  a:hover {
+    color: #fd79a8;
+  }
+
+  .menu {
+    background: #636e72;
+  }
+
+  .navbar-btn .icon-bar {
+    background: #dfe6e9;
+  }
+
+  .panel {
+    border: transparent;
+    background: #b2bec3;
+  }
+
+  .panel-heading {
+    border: transparent;
   }
 }
